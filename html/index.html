@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman</title>
-    <link rel="stylesheet" href="../css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>
-    <h1>Hangman</h1>
-    
+  <h1>Hangman</h1>
+
+  <div id="rectangle">
+
+    <div id="canvasContainer">
+      <canvas id="hangman" width="600" height="300"></canvas>
+    </div>
+
+
+    <div id="gameInfo">
+      <h2 id="wordDisplay"></h2>
+      <p id="falseWordsCounter">0/6 Falsch geraten</p>
+      <div id="buttonContainer"></div>
+    </div>
+  </div>
+
+  <script src="../scripts/indexScript.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      const word = localStorage.getItem("starWord");
+      document.getElementById("wordDisplay").textContent = word;
+      generateButtons();
+
+      const canvas = document.getElementById("hangman");
+      const ctx = canvas.getContext('2d');
+      ctx.fillRect(10, 250, 220, 10);
+      ctx.fillRect(10, 10, 10, 250);
+      ctx.fillRect(10, 10, 300, 10);
+      ctx.fillRect(300, 10, 5, 40);
+
+      
+      
+    });
+  </script>
 </body>
+
 </html>

@@ -1,9 +1,74 @@
-h1{
-    color: red;
-    font-size: 50px;
-    text-align: center;
+body {
+  background-color: darkblue;
+  font-family: Arial, sans-serif;
 }
 
-body{
-    background-color: lightgreen;
+h1 {
+  color: red;
+  margin-bottom: 200px;
+  font-size: 50px;
+  text-align: center;
 }
+
+#rectangle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  gap: 30px; 
+}
+
+#canvasContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+#buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 70px;
+}
+
+#buttonContainer button {
+  width: 40px;
+  height: 30px;
+  background-color: darkblue;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#buttonContainer button:hover {
+  background-color: navy;
+}
+
+#wordDisplay {
+  font-size: 24px;
+  margin: 0;
+}
+
+#falseWordsCounter {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+
